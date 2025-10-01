@@ -15,17 +15,20 @@ void tambahBarang() {
     printf("Jumlah: ");
     scanf("%d", &jumlah[totalBarang]);
     totalBarang++;
+    puts("Barang berhasil ditambahkan!");
     puts("");
 }
 
 void lihatBelanja() {
     puts("\n>> Daftar Belanja");
-    puts("-----------------------------");
-    printf("No\tNama\tHarga\tJumlah\n");
-    puts("-----------------------------");
+    puts("-----------------------------------------");
+    printf("No\tNama\tHarga\tJumlah\tSubtotal\n");
+    puts("-----------------------------------------");
     for (int i = 0; i < totalBarang; i++) {
-        printf("%d\t%s\t%d\t%d\n",i+1, nama[i], harga[i], jumlah[i]);
+        printf("%d\t%s\t%d\t%d\t\t%d\n",i+1, nama[i], harga[i], jumlah[i], (harga[i] * jumlah[i]));
     }
+    puts("-----------------------------------------");
+    printf("Total item: %d\n", totalBarang);
     puts("");
 }
 
@@ -41,7 +44,7 @@ void hitungTotal() {
     if (totalHarga > 100000) {
         float diskon = totalHarga * 0.1;
         int bayar = totalHarga - diskon;
-        printf("Diskon\t\t= 10%%\n");
+        printf("Diskon\t\t= Rp%.0f\t(10%%)\n", diskon);
         printf("Bayar\t\t= Rp%d\n", bayar);
     } else {
         printf("Diskon\t\t= 0%%\n");

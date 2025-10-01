@@ -3,4 +3,5 @@ project(Aplikasi_Kasir_Sederhana C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(Aplikasi_Kasir_Sederhana main.c)
+add_executable(Aplikasi_Kasir_Sederhana main.c
+)
