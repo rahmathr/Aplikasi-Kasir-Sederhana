@@ -1,1 +1,1 @@
-# aplikasi-kasir-sederhana
+# Aplikasi-Kasir-Sederhana
